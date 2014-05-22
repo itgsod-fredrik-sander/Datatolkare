@@ -102,7 +102,7 @@ describe 'main' do
   end
 
   it 'should print the day with the biggest variation' do
-    main('spec/test.dat')
+    main('test.dat')
     $stdout.string.should == "Day 2 had the biggest variation (26.0 degrees)\n"
   end
 

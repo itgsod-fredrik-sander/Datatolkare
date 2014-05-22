@@ -1,7 +1,7 @@
 def split_line(line)
   raise ArgumentError, 'can not parse empty line' if line.empty?
   line = line.strip.split(/\s+/)
-
+  
   return line
 end
 
@@ -29,5 +29,6 @@ def load_weather_file(filepath)
 end
 
 def main(path)
-  weather_data = load_weather_file(path)      
+  weather_data = load_weather_file(path)
+  weather_data.each {|data| data = split_line(data)}     
 end
