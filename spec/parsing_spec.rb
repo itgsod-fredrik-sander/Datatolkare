@@ -43,9 +43,9 @@ describe 'encode_line' do
     expect { encode_line([1,2]) }.to raise_error ArgumentError, 'incomplete array'
   end
 
-  #it 'should return a hash with the correct keys' do
-  #  encode_line(@example_array).keys.should match_array [:date, :max, :min]
-  #end
+  it 'should return a hash with the correct keys' do
+    encode_line(@example_array).keys.should match_array [:date, :max, :min]
+  end
 
   #it 'should return the array correctly encoded as a hash' do
   #  encode_line(@example_array).should == @example_hash

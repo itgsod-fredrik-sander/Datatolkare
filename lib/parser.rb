@@ -7,4 +7,6 @@ end
 
 def encode_line(weather_data)
   raise ArgumentError, 'incomplete array' if weather_data.size < 3
+
+  weather = {}
 end
