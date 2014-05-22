@@ -7,6 +7,7 @@ end
 
 def encode_line(weather_data)
   raise ArgumentError, 'incomplete array' if weather_data.size < 3
+  weather = {date: weather_data[0].to_i, max: weather_data[1].to_i, min: weather_data[2].to_i}
 
-  weather = {date: weather_data[0], max: weather_data[1], min: weather_data[2]}
+  return weather
 end

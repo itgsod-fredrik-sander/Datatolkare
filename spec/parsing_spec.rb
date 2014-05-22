@@ -47,10 +47,9 @@ describe 'encode_line' do
     encode_line(@example_array).keys.should match_array [:date, :max, :min]
   end
 
-  #it 'should return the array correctly encoded as a hash' do
-  #  encode_line(@example_array).should == @example_hash
-  #end
-
+  it 'should return the array correctly encoded as a hash' do
+    encode_line(@example_array).should == @example_hash
+  end
 end
 
 #describe 'find_biggest_variation' do
