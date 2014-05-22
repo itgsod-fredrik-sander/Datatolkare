@@ -18,6 +18,10 @@ def find_biggest_variation(weather_data)
 end
 
 def load_weather_file(filepath)
-	raise ArgumentError, 'path must not be empty' if filepath.empty?
-	raise IOError, 'file does not exist' if !File.file?(filepath)
+  raise ArgumentError, 'path must not be empty' if filepath.empty?
+  raise IOError, 'file does not exist' if !File.file?(filepath)
+
+  content = File.readlines(filepath)
+  content.delete_at(0)
+  content.delete_at(0)
 end

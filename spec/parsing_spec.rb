@@ -85,10 +85,10 @@ describe 'load_weather_file' do
   it 'should raise IOError with correct message if file does not exist' do
     expect { load_weather_file('nonexisting.file') }.to raise_error IOError, 'file does not exist'
   end
-  #it 'should read the file and return an array of all rows in the file EXCEPT the first two' do
-  #  load_weather_file('spec/test.dat').should == ["   1  88    67    74          53.8       0.00 F       280  9.6 270  17  1.6  93 23 1004.5\n", "   2  87    61    71          46.5       0.00         330  8.7 340  23  3.3  70 28 1004.5\n", "   3  83    72    66          39.6       0.00         350  5.0 350   9  2.8  59 24 1016.8"]
-  #end
 
+  it 'should read the file and return an array of all rows in the file EXCEPT the first two' do
+    load_weather_file('test.dat').should == ["   1  88    67    74          53.8       0.00 F       280  9.6 270  17  1.6  93 23 1004.5\n", "   2  87    61    71          46.5       0.00         330  8.7 340  23  3.3  70 28 1004.5\n", "   3  83    72    66          39.6       0.00         350  5.0 350   9  2.8  59 24 1016.8"]
+  end
 end
 
 #describe 'main' do
