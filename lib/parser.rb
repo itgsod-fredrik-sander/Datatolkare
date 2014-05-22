@@ -18,5 +18,5 @@ def find_biggest_variation(weather_data)
 end
 
 def load_weather_file(filepath)
-
+	raise ArgumentError, 'path must not be empty' if filepath.empty?
 end
