@@ -59,9 +59,9 @@ describe 'find_biggest_variation' do
   end
 
   #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
-  #it 'should raise ArgumentError with correct message if array is empty' do
-  #  expect { find_biggest_variation([]) }.to raise_error ArgumentError, 'array must not be empty'
-  #end
+  it 'should raise ArgumentError with correct message if array is empty' do
+    expect { find_biggest_variation([]) }.to raise_error ArgumentError, 'array must not be empty'
+  end
 
   #it 'should return the hash for the day with the biggest variation' do
   #  example_array = [{ date: 1, max: 88, min: 59 }, { date: 2, max: 88, min: 53 }, { date: 3, max: 88, min: 67 } ]

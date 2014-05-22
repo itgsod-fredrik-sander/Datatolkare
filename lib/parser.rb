@@ -13,5 +13,6 @@ def encode_line(weather_data)
 end
 
 def find_biggest_variation(weather_data)
+  raise ArgumentError, 'array must not be empty' if weather_data.empty?
 
 end
