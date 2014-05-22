@@ -70,40 +70,40 @@ require_relative '../lib/parser'
 
 #end
 
-describe 'load_weather_file' do
+#describe 'load_weather_file' do
 
-  it 'should take a string as argument' do
-    expect { load_weather_file() }.to raise_error ArgumentError
-  end
+ # it 'should take a string as argument' do
+ #   expect { load_weather_file() }.to raise_error ArgumentError
+ # end
+
+#  #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
+#  it 'should raise ArgumentError with correct message if string is empty' do
+#    expect { load_weather_file('') }.to raise_error ArgumentError, 'path must not be empty'
+#  end
 
   #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
-  it 'should raise ArgumentError with correct message if string is empty' do
-    expect { load_weather_file('') }.to raise_error ArgumentError, 'path must not be empty'
-  end
-
-  #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
-  it 'should raise IOError with correct message if file does not exist' do
-    expect { load_weather_file('nonexisting.file') }.to raise_error IOError, 'file does not exist'
-  end
-
-  it 'should read the file and return an array of all rows in the file EXCEPT the first two' do
-    load_weather_file('test.dat').should == ["   1  88    67    74          53.8       0.00 F       280  9.6 270  17  1.6  93 23 1004.5\n", "   2  87    61    71          46.5       0.00         330  8.7 340  23  3.3  70 28 1004.5\n", "   3  83    72    66          39.6       0.00         350  5.0 350   9  2.8  59 24 1016.8"]
-  end
-end
-
-#describe 'main' do
-#
-#  before do
-#    $stdout = StringIO.new
-#  end
-#
-#  after(:all) do
-#    $stdout = STDOUT
+#  it 'should raise IOError with correct message if file does not exist' do
+#    expect { load_weather_file('nonexisting.file') }.to raise_error IOError, 'file does not exist'
 #  end
 
-#  it 'should print the day with the biggest variation' do
-#    main('spec/test.dat')
-#    $stdout.string.should == "Day 2 had the biggest variation (26.0 degrees)\n"
+#  it 'should read the file and return an array of all rows in the file EXCEPT the first two' do
+#    load_weather_file('test.dat').should == ["   1  88    67    74          53.8       0.00 F       280  9.6 270  17  1.6  93 23 1004.5\n", "   2  87    61    71          46.5       0.00         330  8.7 340  23  3.3  70 28 1004.5\n", "   3  83    72    66          39.6       0.00         350  5.0 350   9  2.8  59 24 1016.8"]
 #  end
-
 #end
+
+describe 'main' do
+#
+  before do
+    $stdout = StringIO.new
+  end
+#
+  after(:all) do
+    $stdout = STDOUT
+  end
+
+  it 'should print the day with the biggest variation' do
+    main('spec/test.dat')
+    $stdout.string.should == "Day 2 had the biggest variation (26.0 degrees)\n"
+  end
+
+end
