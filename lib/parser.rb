@@ -11,3 +11,7 @@ def encode_line(weather_data)
 
   return weather
 end
+
+def find_biggest_variation(weather_data)
+
+end

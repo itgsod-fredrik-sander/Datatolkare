@@ -27,36 +27,36 @@ require_relative '../lib/parser'
 #  end
 #end
 
-describe 'encode_line' do
+#describe 'encode_line' do
 
-  before do
-    @example_array = ["1", "88", "59", "74", "53.8", "0.00", "F", "280", "9.6", "270", "17", "1.6", "93", "23", "1004.5"]
-    @example_hash = { date: 1, max: 88, min: 59 }
-  end
+#  before do
+#    @example_array = ["1", "88", "59", "74", "53.8", "0.00", "F", "280", "9.6", "270", "17", "1.6", "93", "23", "1004.5"]
+#    @example_hash = { date: 1, max: 88, min: 59 }
+#  end
 #
-  it 'should take an array as argument' do
-    expect { encode_line() }.to raise_error ArgumentError
-  end
+#  it 'should take an array as argument' do
+#    expect { encode_line() }.to raise_error ArgumentError
+#  end
 
   #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
-  it 'should raise ArgumentError with correct message if array is too short' do
-    expect { encode_line([1,2]) }.to raise_error ArgumentError, 'incomplete array'
+#  it 'should raise ArgumentError with correct message if array is too short' do
+#    expect { encode_line([1,2]) }.to raise_error ArgumentError, 'incomplete array'
+#  end
+
+#  it 'should return a hash with the correct keys' do
+#    encode_line(@example_array).keys.should match_array [:date, :max, :min]
+#  end
+
+#  it 'should return the array correctly encoded as a hash' do
+#    encode_line(@example_array).should == @example_hash
+#  end
+#end
+
+describe 'find_biggest_variation' do
+
+  it 'should take an array of hashes as argument' do
+    expect { find_biggest_variation() }.to raise_error ArgumentError
   end
-
-  it 'should return a hash with the correct keys' do
-    encode_line(@example_array).keys.should match_array [:date, :max, :min]
-  end
-
-  it 'should return the array correctly encoded as a hash' do
-    encode_line(@example_array).should == @example_hash
-  end
-end
-
-#describe 'find_biggest_variation' do
-
-  #it 'should take an array of hashes as argument' do
-  #  expect { find_biggest_variation() }.to raise_error ArgumentError
-  #end
 
   #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
   #it 'should raise ArgumentError with correct message if array is empty' do
@@ -68,7 +68,7 @@ end
   #  find_biggest_variation(example_array).should == { date: 2, max: 88, min: 53}
   #end
 
-#end
+end
 
 #describe 'load_weather_file' do
 #
