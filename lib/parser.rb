@@ -4,3 +4,7 @@ def split_line(line)
 
   return line
 end
+
+def encode_line(weather_data)
+  
+end
