@@ -28,6 +28,6 @@ def load_weather_file(filepath)
   return content
 end
 
-def main
-  
+def main(path)
+      
 end
