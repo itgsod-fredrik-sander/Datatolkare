@@ -14,9 +14,9 @@ describe 'split_line' do
   end
 
   # Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
-  #it 'should raise ArgumentError with correct error message if fed a blank line' do
-  #  expect { split_line('') }.to raise_error ArgumentError, 'can not parse empty line'
-  #end
+  it 'should raise ArgumentError with correct error message if fed a blank line' do
+    expect { split_line('') }.to raise_error ArgumentError, 'can not parse empty line'
+  end
 
   #it 'should return an array' do
   #  split_line(@example_input1).should be_instance_of Array
@@ -91,7 +91,7 @@ end
   #  load_weather_file('spec/test.dat').should == ["   1  88    67    74          53.8       0.00 F       280  9.6 270  17  1.6  93 23 1004.5\n", "   2  87    61    71          46.5       0.00         330  8.7 340  23  3.3  70 28 1004.5\n", "   3  83    72    66          39.6       0.00         350  5.0 350   9  2.8  59 24 1016.8"]
   #end
 
-end
+#end
 
 #describe 'main' do
 #
