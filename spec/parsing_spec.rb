@@ -22,9 +22,9 @@ describe 'split_line' do
     split_line(@example_input1).should be_instance_of Array
   end
 
-  #it 'should return an array with each value in its own field' do
-  #  split_line(@example_input1).should match_array @example_output1
-  #end
+  it 'should return an array with each value in its own field' do
+    split_line(@example_input1).should match_array @example_output1
+  end
 end
 
 #describe 'encode_line' do
