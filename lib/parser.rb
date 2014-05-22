@@ -36,5 +36,5 @@ def main(path)
   weather_data.map! {|data| encode_line(data)}
   
   biggest_variation = find_biggest_variation(weather_data)
-  puts "Day #{biggest_variation[:date]} had the biggest variation <#{(biggest_variation[:max] - biggest_variation[:min]).to_f} degrees>"
+  puts "Day #{biggest_variation[:date]} had the biggest variation (#{(biggest_variation[:max] - biggest_variation[:min]).to_f} degrees)"
 end
