@@ -39,9 +39,9 @@ describe 'encode_line' do
   end
 
   #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
-  #it 'should raise ArgumentError with correct message if array is too short' do
-  #  expect { encode_line([1,2]) }.to raise_error ArgumentError, 'incomplete array'
-  #end
+  it 'should raise ArgumentError with correct message if array is too short' do
+    expect { encode_line([1,2]) }.to raise_error ArgumentError, 'incomplete array'
+  end
 
   #it 'should return a hash with the correct keys' do
   #  encode_line(@example_array).keys.should match_array [:date, :max, :min]
@@ -51,7 +51,7 @@ describe 'encode_line' do
   #  encode_line(@example_array).should == @example_hash
   #end
 
-#end
+end
 
 #describe 'find_biggest_variation' do
 
