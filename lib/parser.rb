@@ -19,4 +19,5 @@ end
 
 def load_weather_file(filepath)
 	raise ArgumentError, 'path must not be empty' if filepath.empty?
+	raise IOError, 'file does not exist' if !File.file?(filepath)
 end
