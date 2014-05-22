@@ -29,5 +29,5 @@ def load_weather_file(filepath)
 end
 
 def main(path)
-      
+  weather_data = load_weather_file(path)      
 end
