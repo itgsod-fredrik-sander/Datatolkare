@@ -52,34 +52,34 @@ require_relative '../lib/parser'
 #  end
 #end
 
-describe 'find_biggest_variation' do
+#describe 'find_biggest_variation' do
 
-  it 'should take an array of hashes as argument' do
-    expect { find_biggest_variation() }.to raise_error ArgumentError
-  end
-
-  #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
-  it 'should raise ArgumentError with correct message if array is empty' do
-    expect { find_biggest_variation([]) }.to raise_error ArgumentError, 'array must not be empty'
-  end
-
-  it 'should return the hash for the day with the biggest variation' do
-    example_array = [{ date: 1, max: 88, min: 59 }, { date: 2, max: 88, min: 53 }, { date: 3, max: 88, min: 67 } ]
-    find_biggest_variation(example_array).should == { date: 2, max: 88, min: 53}
-  end
-
-end
-
-#describe 'load_weather_file' do
-#
-#  it 'should take a string as argument' do
-#    expect { load_weather_file() }.to raise_error ArgumentError
+#  it 'should take an array of hashes as argument' do
+#    expect { find_biggest_variation() }.to raise_error ArgumentError
 #  end
 
   #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
- # it 'should raise ArgumentError with correct message if string is empty' do
- #   expect { load_weather_file('') }.to raise_error ArgumentError, 'path must not be empty'
+#  it 'should raise ArgumentError with correct message if array is empty' do
+#    expect { find_biggest_variation([]) }.to raise_error ArgumentError, 'array must not be empty'
+#  end
+
+ # it 'should return the hash for the day with the biggest variation' do
+ #   example_array = [{ date: 1, max: 88, min: 59 }, { date: 2, max: 88, min: 53 }, { date: 3, max: 88, min: 67 } ]
+ #   find_biggest_variation(example_array).should == { date: 2, max: 88, min: 53}
  # end
+
+#end
+
+describe 'load_weather_file' do
+
+  it 'should take a string as argument' do
+    expect { load_weather_file() }.to raise_error ArgumentError
+  end
+
+  #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
+  it 'should raise ArgumentError with correct message if string is empty' do
+    expect { load_weather_file('') }.to raise_error ArgumentError, 'path must not be empty'
+  end
 
   #Detta test kan kommenteras bort om man inte vill testa 'Undantagshantering' på C- eller A-nivå
   #it 'should raise IOError with correct message if file does not exist' do
@@ -90,7 +90,7 @@ end
   #  load_weather_file('spec/test.dat').should == ["   1  88    67    74          53.8       0.00 F       280  9.6 270  17  1.6  93 23 1004.5\n", "   2  87    61    71          46.5       0.00         330  8.7 340  23  3.3  70 28 1004.5\n", "   3  83    72    66          39.6       0.00         350  5.0 350   9  2.8  59 24 1016.8"]
   #end
 
-#end
+end
 
 #describe 'main' do
 #
