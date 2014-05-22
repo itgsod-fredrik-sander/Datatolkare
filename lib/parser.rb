@@ -24,4 +24,6 @@ def load_weather_file(filepath)
   content = File.readlines(filepath)
   content.delete_at(0)
   content.delete_at(0)
+
+  return content
 end
