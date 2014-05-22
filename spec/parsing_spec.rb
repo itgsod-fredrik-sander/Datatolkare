@@ -63,10 +63,10 @@ describe 'find_biggest_variation' do
     expect { find_biggest_variation([]) }.to raise_error ArgumentError, 'array must not be empty'
   end
 
-  #it 'should return the hash for the day with the biggest variation' do
-  #  example_array = [{ date: 1, max: 88, min: 59 }, { date: 2, max: 88, min: 53 }, { date: 3, max: 88, min: 67 } ]
-  #  find_biggest_variation(example_array).should == { date: 2, max: 88, min: 53}
-  #end
+  it 'should return the hash for the day with the biggest variation' do
+    example_array = [{ date: 1, max: 88, min: 59 }, { date: 2, max: 88, min: 53 }, { date: 3, max: 88, min: 67 } ]
+    find_biggest_variation(example_array).should == { date: 2, max: 88, min: 53}
+  end
 
 end
 
