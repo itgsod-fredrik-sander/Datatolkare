@@ -14,6 +14,7 @@ end
 
 def find_biggest_variation(weather_data)
   raise ArgumentError, 'array must not be empty' if weather_data.empty?
+
   return weather_data.max {|a, b| a[:max] - a[:min] <=> b[:max] - b[:min]}
 end
 
@@ -30,5 +31,7 @@ end
 
 def main(path)
   weather_data = load_weather_file(path)
-  weather_data.each {|data| data = split_line(data)}     
+
+  weather_data.map! {|data| split_line(data)}
+  weather_data.map! {|data| encode_line(data)}
 end
